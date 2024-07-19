@@ -1,0 +1,75 @@
+#Frame work vs Library
+https://www.interviewbit.com/blog/framework-vs-library/
+
+#What is react?
+React is a library for helping developers build user interfaces (UIs) as a tree of small pieces
+called components. 
+
+#State
+The state is a built-in React object that is used to contain data or information about the component.
+=> state essentially contains data that is local to the component.
+
+//props : Just short for properties. props are used to pass data from one component to another.
+
+
+
+# do see chatgpt chat regarding this topic  
+state management
+
+# what are react hooks
+React hooks are functions that allow you to use state and other React 
+features in functional components, reducing the need for class components.
+
+
+context api
+cors error
+preflight request
+see your code both
+json
+mongodb
+why use mongodb
+react router
+server side rendering 
+client side rendering
+
+
+
+call back
+.then
+asynchronous
+is javascript asynchronous
+async await
+promises
+
+#What is HTTP request?
+HTTP stands for Hypertext Transfer Protocol.
+https://www.javatpoint.com/computer-network-http
+
+#What is an API?
+An API is a set of definitions and protocols for building and integrating application software.
+It’s sometimes referred to as a contract between an information provider and an information user.
+
+You can think of an API as a mediator between the users or clients and the 
+resources or web services they want to get.
+
+#What is REST API?
+REST stands for Representational State Transfer.
+REST is an architectural style for developing applications that can be accessed over the network.
+REpresentational State Transfer (REST) is a software architectural style that
+defines the constraints to create web services
+
+Why good?
+It's simple
+It's stateless
+
+
+#what is nodejs
+Node.js is a runtime environment that allows developers to execute JavaScript code 
+on the server-side, enabling server-side applications using JavaScript.
+
+#What is Express?
+Express is a minimal and flexible Node.js web application framework that 
+provides a robust set of features for web and mobile applications.
+
+
+https://www.freecodecamp.org/news/synchronous-vs-asynchronous-in-javascript/

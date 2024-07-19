@@ -1,0 +1,52 @@
+OOPS : 
+
+# Keyword : Static
+
+# In java static local variables are not allowed
+In Java, a static variable is a class variable (for whole class). 
+So if we have static local variable (a variable with scope limited to function),
+it violates the purpose of static. Hence compiler does not allow static local variable.
+
+# Keyword : const
+
+Value of a const cannot be changed. It needs to be initialized at the time of declaration.
+In java const Keyword is not there
+https://stackoverflow.com/questions/3141087/what-is-meant-with-const-at-end-of-function-declaration
+
+const appearing after the parentheses in a member function
+declaration specifies that the function will not change any data
+in the calling object
+
+https://stackoverflow.com/questions/221346/what-can-i-use-instead-of-the-arrow-operator
+a->b is equivalent to (*a).b
+
+
+# Keyword : Super
+If super( ) is not used, then the default or parameterless constructor of
+each superclass will be executed.
+
+# Keyword : this
+The this keyword is used to refer to the current object in a method or constructor.
+
+# Keyword : final
+The final keyword in java is used to restrict the user.
+The java final keyword can be used in many context. Final can be:
+variable - final variable value can't be changed
+method - final method can't be overridden by subclasses
+class - final class can't be inherited
+
+
+
+
+
+Inheritance - helps to reuse the code and establish a relationship between different classes
+
+Polymorphism - When you have and interface but can have multiple implementations.
+Polymorphism refers to the process by which some code, data, method, or object behaves differently
+under different circumstances or contexts
+
+
+Encapsulation  - Wrapping up of data and methods into a single unit is Encapsulation (e.g. Class)
+
+Abstraction - hiding the implementation details from the user, only the functionality will be provided to the user. 
+                abstract class and interface

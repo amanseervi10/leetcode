@@ -1,0 +1,8 @@
+These are sql questions from leetcode
+
+All queries are based on Oracle syntax
+
+The question are from the list SQL 50 on leetcode
+link : https://leetcode.com/studyplan/top-sql-50/
+
+The question name here denotes the question number on leetcode

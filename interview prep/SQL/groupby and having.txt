@@ -1,0 +1,59 @@
+Q. How group by works and why do we use it with aggregate functions (like count,sum, avg, min, max)
+
+//https://stackoverflow.com/questions/20074562/group-by-without-aggregate-function#:~:text=If%20there's%20no%20aggregate%20function,sorting%20instead%20(ORDER%20BY).&text=Functionally%2C%20if%20you%20use%20GROUP,are%20just%20doing%20a%20DISTINCT.
+
+
+That's how GROUP BY works. It takes several rows and turns them into one row. 
+Because of this, it has to know what to do with all the combined rows where there 
+have different values for some columns (fields). 
+This is why you have two options for every field you want to SELECT : 
+Either include it in the GROUP BY clause, 
+or use it in an aggregate function so the system knows how you want to combine the field.
+
+For example, let's say you have this table:
+
+Name | OrderNumber
+------------------
+John | 1
+John | 2
+If you say GROUP BY Name, how will it know which OrderNumber to show in the result? 
+So you either include OrderNumber in group by, which will result in these two rows. 
+Or, you use an aggregate function to show how to handle the OrderNumbers.
+For example, MAX(OrderNumber), which means the result is John | 2 or 
+SUM(OrderNumber) which means the result is John | 3.
+
+
+
+//Having : 
+Why "having" keyword when we have "where".
+
+--The HAVING clause was added to SQL because the WHERE keyword
+cannot be used with aggregate functions.
+Eg. 
+# SELECT AGE
+# FROM CUSTOMERS
+# GROUP BY age
+# HAVING COUNT(age) >= 3
+
+--SQL HAVING clause is similar to the WHERE clause; 
+they are both used to filter rows in a table based on conditions. 
+However, the HAVING clause was included in SQL to filter grouped rows instead of single rows. 
+These rows are grouped together by the GROUP BY clause, so, 
+the HAVING clause must always be followed by the GROUP BY clause. 
+It can be used with aggregate functions, whereas the WHERE clause cannot.
+
+So first the where clause filters out rows and then those rows are grouped and then having
+condition is applied.
+
+So basically first we group the rows and then we apply the condition on the grouped rows.
+
+As in the above example we can use the aggregate function in the having clause but not in the where clause.
+
+//Order by :
+
+--This obviously has to be written at the last as only after all conditions have been applied and
+you have your final result , can you go on to sort the result.
+
+
+--Null functions : 
+https://www.w3schools.com/sql/sql_isnull.asp

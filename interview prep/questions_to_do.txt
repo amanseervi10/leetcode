@@ -1,0 +1,12 @@
+kth smallest/largest number in an array 
+
+kth smallest/largest number in two sorted arrays 
+
+quick sort/ merge sort/inversions/ cyclic sort
+quick sort merge sort in linked list
+
+array ones in copy, missing positive number, cyclic sort
+
+binary search
+
+graph algorithms

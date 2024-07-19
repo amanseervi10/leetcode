@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "atomic": "cpp",
+        "barrier": "cpp",
+        "condition_variable": "cpp",
+        "future": "cpp",
+        "latch": "cpp",
+        "string_view": "cpp",
+        "regex": "cpp",
+        "vector": "cpp",
+        "source_location": "cpp"
+    }
+}

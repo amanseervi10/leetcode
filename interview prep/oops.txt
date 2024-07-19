@@ -1,0 +1,95 @@
+Java is machine independent as java compiler first produces bytecode.
+Now this bytecode can be run on JVM (Java Virtual machine) which different machines have of their own.
+
+So you can have a java code, you can compile it on some system, and then take the bytecode produced
+to any other system and still run it there. You won't need to take your source code.
+
+In C++,when we compile a program,it is first translated into Assembly Language and 
+then to Machine Language. In the machine language code,the instructions are suitable only for 
+the machine you compiled. You can’t run the same exe file of that program in another computer 
+because architectures of computers differ. Even though it doesn’t differ,still we can’t run such. 
+
+Even java is not completely machine independent as that JVM running the bytecode part is essentially
+same as c++ compiler doing its stuff, that part is machine dependent.
+
+Also this java bytecode thing provides security as now you won't have to actually take your source code
+to a different untrusted computer , you can send the bytecode.
+
+In c++ since the .exe file made on t    his computer won't work on ther computer, you have to take 
+the source code, which can be a security issue.
+
+
+So in java, first the code is converted to byte code and then it is run using JVM.
+JVM itself is part of Java Run Time Envirnoment (JRE), which is essential to run any java program.
+
+A JRE is made up of a Java virtual machine (JVM), Java class libraries, and the Java class loader
+
+The JVM has an interpreter. The bytecode that was converted is interpreted, i.e run line by line.
+This JVM also has JIT, i.e a just in time compiler.
+
+What is JIT and why to use?
+
+Intepreter runs line by line, now supposed you have a function being called multiple times, every
+time the program control goes to that funtion, it will be again interpreted line by line.
+
+This makes it very slow. So a JIT compiler essentially compiles the bytecode at run time.
+So now if it is realized that a a particular part of the code is being used again and again,
+we can direclty use the machine code for it rather than interpreting it, as out JIT compiled the
+program and we have machine code for it. This increases efficiency.
+
+
+
+
+
+
+public static void main(String args[])
+All these are important and necessary for writing main function. They cannot be altered
+
+The args thing can be altered as it is just name of variable and can be anything
+main is not a keyword, it is just another function, but one which the jvm tries to find to execute
+
+If no main function, the program will still compile but won't execute.
+
+
+The main method in Java is not called by the OS but rather by the JVM.
+Why java main method must have return type void and not int like in c++?
+
+In c++ return type 0 has an actual meaning as it tells the OS that the program was exited upon
+successful completion.
+
+The reason for the main method having void as return type is that once main finishes, 
+it doesn't necessarily mean that the entire program finished. 
+If main spawns new threads, then these threads can keep program running. 
+The return type of main doesn't make much sense at this point.
+
+For example, this is very common in Swing applications, where the main method typically 
+starts a GUI on the Swing thread, and then main finishes... but the program is still running.
+
+
+When JVM starts, it will run main() method, but when main() finishes, 
+it doesn't mean that JVM terminaes. JVM continues to execute all threads until :
+1) Runtime.exit() is called OR 
+2) all normal (not daemon) threads have died. Daemon threads do not count for this second condition.
+In other words ... if main() method spawns some normal threads, JVM will not terminate when main() finishes. 
+If main() doesn't spawn any threads, JVM will terminate.
+If main() spawns only daemon threads, JVM will also terminate when main() finishes
+
+Daemon thread in Java is also a service provider thread that provides services to the user thread.
+Its life depends on the mercy of user threads i.e. when all the user threads die, JVM terminates this thread automatically.
+
+
+
+some links regarding stack and heap : 
+https://www.quora.com/Where-are-the-arrays-in-C-stored-in-a-stack-or-a-heap
+https://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap
+https://www.programmerinterview.com/data-structures/difference-between-stack-and-heap/
+https://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap?noredirect=1&lq=1
+https://www.quora.com/Is-stack-memory-faster-than-heap?no_redirect=1
+https://stackoverflow.com/questions/8700491/what-is-stored-on-heap-and-what-is-stored-on-stack
+
+
+
+
+void foo(vector<int> bar); // by value
+void foo(vector<int> &bar); // by reference (non-const, so modifiable inside foo)
+void foo(vector<int> const &bar); // by const-reference (non-modifiable inside foo)

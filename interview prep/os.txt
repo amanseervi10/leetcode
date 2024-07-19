@@ -1,0 +1,6 @@
+https://stackoverflow.com/questions/17874981/could-anyone-explain-to-me-about-system-calls-in-programming-languages
+
+The intent of the ISO C standard is to provide
+portability of conforming C programs to a wide variety of operating systems, not only
+the UNIX System
+
